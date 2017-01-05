@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9adfbfe6-b917-49d1-989c-a49c741e687c" name="shipyard_static" url="http://172.16.1.27">
+        <fileTransfer host="172.16.1.27" port="22" accessType="SFTP" password="df9bdf98df99dfdbdfdddfcf" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

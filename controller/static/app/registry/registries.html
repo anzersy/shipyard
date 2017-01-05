@@ -1,17 +1,17 @@
 <div class="ui small remove modal transition" style="margin-top: -98px;">
 <i class="close icon"></i>
 <div class="header">
-    Remove Registry: {{ vm.selectedRegistry.name }}
+    删除仓库: {{ vm.selectedRegistry.name }}
 </div>
 <div class="content">
-    <p>Are you sure you want to remove this registry?</p>
+    <p>确定要删除该镜像仓库吗?</p>
 </div>
 <div class="actions">
     <div class="ui negative button">
-        No
+        否
     </div>
     <div ng-click="vm.removeRegistry()" class="ui positive right labeled icon button">
-        Yes
+        是
         <i class="checkmark icon"></i>
     </div>
 </div>
@@ -21,16 +21,16 @@
     <div class="two column row">
         <div class="left floated column">
             <div ng-click="vm.refresh()" class="ui small blue labeled icon button">
-                <i class="refresh icon"></i> Refresh 
+                <i class="refresh icon"></i> 刷新
             </div>
             <div ui-sref="dashboard.addRegistry" class="ui small green labeled icon button">
-                <i class="plus icon"></i> Add Registry 
+                <i class="plus icon"></i> 添加镜像仓库
             </div>
         </div>
 
         <div class="right aligned right floated column">
             <div class="ui small icon input">
-                <input ng-model="tableFilter" placeholder="Search registries..." reset-field/>
+                <input ng-model="tableFilter" placeholder="搜索仓库..." reset-field/>
             </div>
         </div>
     </div>
@@ -41,9 +41,9 @@
                 <i class="info icon"></i>
                 <div class="content">
                     <div class="header">
-                        Registries
+                        镜像仓库
                     </div>
-                    <p>There are no registries.</p>
+                    <p>然并卵.</p>
                 </div>
             </div>
         </div>
@@ -54,8 +54,8 @@
             <table class="ui sortable celled table">
                 <thead ng-hide="">
                     <tr>
-                        <th>Name</th>
-                        <th>Address</th>
+                        <th>仓库名称</th>
+                        <th>仓库地址</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -77,15 +77,15 @@
         </div>
     </div>
 
-    <div class="row" ng-show="vm.registries.length > 0 && filteredContainers.length === 0">
+    <div class="row" ng-show="vm.registries.length > 0 && filteredRegistries.length === 0">
         <div class="column">
             <div class="ui icon message">
                 <i class="info icon"></i>
                 <div class="content">
                     <div class="header">
-                        Registries
+                        仓库
                     </div>
-                    <p>No registries matched your filter query</p>
+                    <p>然而并没有你想要的...</p>
                 </div>
             </div>
         </div>

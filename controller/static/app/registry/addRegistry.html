@@ -11,22 +11,22 @@
     <div class="column">
         <div class="ui segment">
             <div class="ui form" ng-submit="vm.addRegistry()" ng-method="post">
-                <h4 class="ui dividing header">Registry Details</h4>
-                <label>Name</label>
+                <h4 class="ui dividing header">仓库信息</h4>
+                <label>名称</label>
                 <div class="field">
-                    <input type="text" name="name" ng-model="vm.name" placeholder="Name of registry (i.e. local)">
+                    <input type="text" name="name" ng-model="vm.name" placeholder="仓库名称">
                 </div>
-                <label>Registry Address</label>
+                <label>地址</label>
                 <div class="field">
-                    <input type="text" name="addr" ng-model="vm.addr" placeholder="Registry Addr (i.e. http://10.1.2.3:5000)">
+                    <input type="text" name="addr" ng-model="vm.addr" placeholder="仓库地址 (i.e. http://10.1.2.3:5000)">
                 </div>
-                <label>Username</label>
+                <label>用户名</label>
                 <div class="field">
-                    <input type="text" name="username" ng-model="vm.username" placeholder="Username">
+                    <input type="text" name="username" ng-model="vm.username" placeholder="用户名">
                 </div>
-                <label>Password</label>
+                <label>密码</label>
                 <div class="field">
-                    <input type="password" name="password" ng-model="vm.password" placeholder="Password">
+                    <input type="password" name="password" ng-model="vm.password" placeholder="密码">
                 </div>
                 <div class="field">
                     <div class="ui checkbox" ng-click="vm.tls.tlsSkipVerify=!vm.tls.tlsSkipVerify">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="ui hidden divider"></div>
-                <div class="ui green submit button">Add Registry</div>
+                <div class="ui green submit button">添加仓库</div>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@ $(function(){
                 rules: [
                 {
                     type   : 'empty',
-                    prompt : 'Please enter a name'
+                        prompt : '请输入名称'
                 }
                 ]
             },
@@ -59,7 +59,7 @@ $(function(){
                 rules: [
                 {
                     type   : 'empty',
-                    prompt : 'Please enter an address'
+                    prompt : '请输入地址'
                 }
                 ]
             }

@@ -24,7 +24,7 @@
             valueField: 'role_name',
             labelField: 'description',
             delimiter: ',',
-            placeholder: 'Select Roles',
+            placeholder: '选择角色',
             onInitialize: function(selectize){
             },
         };

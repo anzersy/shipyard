@@ -11,7 +11,7 @@
                                 <i class="block layout icon"></i> {{vm.selectedRepository.fsLayers.length}}
                             </div>
                             <div class="label">
-                                Layers
+                                层级
                             </div>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
 
             <div class="ui divider"></div>
 
-            <h2 class="ui header">Layers</h2>
+            <h2 class="ui header">层级</h2>
             <div class="ui segment" ng-repeat="l in vm.selectedRepository.fsLayers">
                 <div class="ui left floated header">
                     <div class="ui green label" ng-show="l.blobSum">{{l.blobSum}}</div>

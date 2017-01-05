@@ -1,17 +1,17 @@
 <div id="remove-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        Remove Image: {{ vm.selectedImage.Id.substring(0,12) }}
+        删除镜像: {{ vm.selectedImage.Id.substring(0,12) }}
     </div>
     <div class="content">
-        <p>Are you sure you want to remove this image?</p>
+        <p>确定要删除这个镜像么?</p>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            No
+            否
         </div>
         <div ng-click="vm.removeImage()" class="ui positive right labeled icon button">
-            Yes
+            是
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -20,22 +20,22 @@
 <div id="tag-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        Tag Image
+        镜像标签
     </div>
     <div class="content">
         <div class="ui form">
             <div class="field">
-                <label>Name</label>
+                <label>标签名</label>
                 <input type="text" ng-model="vm.tagImageName">
             </div>
         </div>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            No
+            否
         </div>
         <div ng-click="vm.tagImage()" class="ui positive right labeled icon button">
-            Yes
+            是
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -44,22 +44,22 @@
 <div id="pull-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        Pull Image
+        拉取镜像
     </div>
     <div class="content">
         <div class="ui form">
             <div class="field">
-                <label>Name</label>
+                <label>镜像名称</label>
                 <input type="text" ng-model="vm.pullImageName">
             </div>
         </div>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            No
+            否
         </div>
         <div ng-click="vm.pullImage()" class="ui positive right labeled icon button">
-            Yes
+            是
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -69,15 +69,15 @@
 <div class="two column row" ng-hide="vm.pulling">
     <div class="left floated column">
         <div ng-click="vm.refresh()" class="ui small blue labeled icon button">
-            <i class="refresh icon"></i> Refresh
+            <i class="refresh icon"></i> 刷新
         </div>
         <div ng-click="vm.showPullImageDialog()" class="ui small green labeled icon button">
-            <i class="download icon"></i> Pull Image
+            <i class="download icon"></i> 拉取镜像
         </div>
     </div>
     <div class="right aligned right floated column">
         <div class="ui small icon input">
-            <input ng-model="tableFilter" placeholder="Search images..." reset-field/>
+            <input ng-model="tableFilter" placeholder="搜索镜像..." reset-field/>
         </div>
     </div>
 </div>
@@ -88,10 +88,10 @@
             <i class="notched circle loading icon"></i>
             <div class="content">
                 <div class="header">
-                    Pulling Image: {{vm.pullImageName}}
+                    拉取中: {{vm.pullImageName}}
                 </div>
-                <p>We're pulling the image to the Swarm cluster now.</p>
-                <p>Please note that this could take a few minutes, depending on availability and size of the image.</p>
+                <p>正在拉取镜像...</p>
+                <p>耐心等候...*_*</p>
             </div>
         </div>
     </div>
@@ -112,9 +112,9 @@
             <i class="info icon"></i>
             <div class="content">
                 <div class="header">
-                    Images
+                    镜像
                 </div>
-                <p>There are no images in the cluster.</p>
+                <p>然而并没有.</p>
             </div>
         </div>
     </div>
@@ -125,12 +125,11 @@
         <table class="ui sortable celled table">
             <thead>
                 <tr>
-                    <th>Names</th>
-                    <th>ID</th>
-                    <th>Created</th>
-                    <th>Node</th>
-                    <th>Virtual Size</th>
-                    <th></th>
+                    <th>镜像名称</th>
+                    <th>镜像ID</th>
+                    <th>创建时间</th>
+                    <th>镜像大小</th>
+                    <th>操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -138,7 +137,6 @@
                     <td><div class="ui label" ng-repeat="t in i.RepoTags">{{t}}</div></td>
                     <td>{{i.Id.substring(0,12)}}</td>
                     <td>{{i.Created * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
-                    <td>{{i.Engine.Name}}</td>
                     <td ng-attr-data-sort-value="{{i.VirtualSize}}">{{i.VirtualSize / 1048576 | number:2}} MB</td>
                     <td class="collapsing">
                         <div ng-click="vm.showTagImageDialog(i)" class="compact ui icon button">
@@ -160,9 +158,9 @@
             <i class="info icon"></i>
             <div class="content">
                 <div class="header">
-                    Images
+                    镜像
                 </div>
-                <p>No images matched your filter query</p>
+                <p>然而还是没有你想要的...</p>
             </div>
         </div>
     </div>

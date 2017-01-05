@@ -3,8 +3,8 @@
     <div class="left floated column">
         <h2 class="ui header">
             <div class="content">
-                Stats
-                <div class="sub header">Container: {{ vm.id | limitTo:12 }}</div>
+                监控
+                <div class="sub header">容器: {{ vm.id | limitTo:12 }}</div>
             </div>
         </h2>
     </div>
@@ -29,13 +29,13 @@
             </div>
         </div>
         <div class="ui segment chart" > 
-            <h3 class="ui header">Memory</h3>
+            <h3 class="ui header">内存</h3>
             <div id='graphMemoryStats' class='chart half with-transitions'>
                 <svg></svg>
             </div>
         </div>
         <div class="ui segment chart" > 
-            <h3 class="ui header">Network</h3>
+            <h3 class="ui header">网络</h3>
             <div id='graphNetStats' class='chart half with-transitions'>
                 <svg></svg>
             </div>
